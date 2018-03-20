@@ -9,16 +9,16 @@ int main()
 
 int p = 0;
 unsigned short l = 0;
-// Here We have 4th Bit Set
+// Here We have 1st Bit Set
 unsigned short int i = 0x1;
-// Here We have 5th bit set
+// Here We have 2nd bit set
 unsigned short int j = 0x2;
 
 // Now we have a requirement where in cumulative result has to be stored
 // i.e status of i,j
 
 /* OR Example*/
-// Considering the maths we should get result as 4th and 5th bit set
+// Considering the maths we should get result as 1st and 2nd bit set
 
 unsigned short int k = (i | j);
 
