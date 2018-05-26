@@ -1,34 +1,44 @@
 #include <stdio.h>
 
+typedef unsigned short U16;
 #define CHKBIT(dst,msk) (dst & msk)
 
-int main()
+
+U16 u16Solution(int n)
 {
 
- int n = 15;
  int cnt = 0;
- static int scnt = 0;
+ static int u16cnt = 0;
 
  while(n != 0)
  {
 
  if(CHKBIT(n,0x01))
  {
- if(cnt > scnt)
+ if(cnt > u16cnt)
  {
- scnt = cnt;
+ u16cnt = cnt;
  } 
  cnt = 0;
  }
  else
  {
        cnt++;
-       
  }
  n = n >> 1;
 
  } 
 
- printf("\nMaximum Number of Zeroes  %d\n",scnt);
+return u16cnt;
+}
+
+
+int main()
+{
+
+ int n = 0;
+ n =256;
+ printf("\nMaximum Number of Zeroes  %d\n",u16Solution(n));
+
  return 0;
 }
